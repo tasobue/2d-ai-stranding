@@ -1,29 +1,11 @@
 import * as Phaser from 'phaser';
-
-class GameScene extends Phaser.Scene {
-    constructor() {
-        super({ key: 'GameScene' });
-    }
-
-    preload() {
-        this.add.text(400, 300, '2D AI Stranding', {
-            fontSize: '32px',
-            color: '#ffffff'
-        }).setOrigin(0.5);
-    }
-
-    create() {
-        this.add.text(400, 350, 'ゲーム開発中...', {
-            fontSize: '16px',
-            color: '#ffffff'
-        }).setOrigin(0.5);
-    }
-}
+import { GameScene } from './scenes/GameScene';
+import { GAME_CONFIG } from './utils/GameConstants';
 
 const config: Phaser.Types.Core.GameConfig = {
     type: Phaser.AUTO,
-    width: 800,
-    height: 600,
+    width: GAME_CONFIG.WIDTH,
+    height: GAME_CONFIG.HEIGHT,
     parent: 'game-container',
     backgroundColor: '#2c3e50',
     scene: GameScene,
