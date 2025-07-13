@@ -1,0 +1,35 @@
+{
+  "name": "2d-ai-stranding",
+  "version": "1.0.0",
+  "description": "AIが生成した２Dゲームマップを冒険し荷物を届けるゲーム",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "nodemon --exec ts-node src/index.ts",
+    "serve": "npx http-server public -p 8080 -o",
+    "build:serve": "npm run build && npm run serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tasobue/2d-ai-stranding.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tasobue/2d-ai-stranding/issues"
+  },
+  "homepage": "https://github.com/tasobue/2d-ai-stranding#readme",
+  "devDependencies": {
+    "@types/node": "^24.0.13",
+    "http-server": "^14.1.1",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "phaser": "^3.90.0"
+  }
+}
